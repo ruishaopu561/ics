@@ -55,3 +55,21 @@ tasks.json
     ]
 }
 ```
+## 安装electronic-wechat
+前提：git,npm  
+命令：
+```
+git clone https://github.com/geeeeeeeeek/electronic-wechat.git 
+```
+Go into the repository 
+```
+cd electronic-wechat 
+```
+Install dependencies and run the app 
+```
+npm install && npm start
+```
+编译成app
+```
+npm run build:linux
+```
