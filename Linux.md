@@ -2,8 +2,8 @@
 这篇md主要记录一些比较零碎的、Linux里经常用到的命令、指令、文件的配置等等。。。
 ## Contents
 - [GDB](#gdb)
-- [vscode](#vscode)
-- [wechat](#wechat)
+- [VS Code](#vscode)
+- [WeChat](#wechat)
 <span id="gdb"></span>
 ## GDB
 GDB Commands:
