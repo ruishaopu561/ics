@@ -1,5 +1,10 @@
 # Linux
 这篇md主要记录一些比较零碎的、Linux里经常用到的命令、指令、文件的配置等等。。。
+## Contents
+- [GDB](#gdb)
+- [vscode](#vscode)
+- [wechat](#wechat)
+<span id="gdb"></span>
 ## GDB
 GDB Commands:
 ```
@@ -10,6 +15,7 @@ print</?> $REG | ADDR
 continue | stepi| nexti
 quit
 ```
+<span id="vscode"></span>
 ## vscode配置C++
 其中Launch.json中的"preLaunchTask"值要与tasks.json中的"Label"值对上，然后Launch.json中主要修改"program"，tasks.json中修改"command"。
 式子中具体命令或字符串的含义，自己去查吧。  
@@ -55,6 +61,7 @@ tasks.json
     ]
 }
 ```
+<span id="wechat"></span>
 ## 安装electronic-wechat
 前提：git,npm  
 命令：
