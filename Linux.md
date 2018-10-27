@@ -1,9 +1,18 @@
 # Linux
 这篇md主要记录一些比较零碎的、Linux里经常用到的命令、指令、文件的配置等等。。。
 ## Contents
+- [GitHub](#github)
 - [GDB](#gdb)
 - [VS Code](#vscode)
 - [WeChat](#wechat)
+<span id="github"></span>
+## GitHub
+### md文件插入图片
+在github中创建一个文件夹，名字随意。然后将需要用到的图片push到该文件夹中，然后点开图片，copy地址。
+在md文件中写入：
+```
+![visible words when picture is invislble](copy path)
+```
 <span id="gdb"></span>
 ## GDB
 GDB Commands:
