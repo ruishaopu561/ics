@@ -1,2 +1,1 @@
-# ics
-ICS Notes
+记录了关于ICS课程的labs以及一些其他的内容
