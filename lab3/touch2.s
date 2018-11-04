@@ -1,0 +1,3 @@
+mov    $0x48,%rax
+pushq  $0x40184c
+ret
