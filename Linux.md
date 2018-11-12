@@ -26,6 +26,7 @@ quit
 ```
 <span id="vscode"></span>
 ## vscode配置C++
+Linux下：  
 其中Launch.json中的"preLaunchTask"值要与tasks.json中的"Label"值对上，然后Launch.json中主要修改"program"，tasks.json中修改"command"。
 式子中具体命令或字符串的含义，自己去查吧。  
 话不多说，上代码  
@@ -66,6 +67,104 @@ tasks.json
             "label": "build",
             "type": "shell",
             "command": "g++ ${file} -o ${fileBasenameNoExtension} -g"
+        }
+    ]
+}
+```
+windows下:  
+c_cpp_properties.json
+```json
+{
+    "configurations":[
+        {
+            "name":"Win32",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${workspaceFolder}",
+                "path..."
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__GNUC__=7",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "path..."
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compilerPath": "..."
+        }
+    ],
+    "version": 4
+}
+```
+launch.json
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "internalConsoleOptions":"neverOpen",
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "Compile"
+        }
+    ]
+}
+```
+tasks.json
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileNDirname}/${fileBasenameNoExtension}.exe",
+                "-g",
+                "-Wall",
+                "-static-libgcc",
+                "-std=c++17"
+           ],
+           "type":"shell",
+           "group":{
+               "kind":"build",
+               "isDefault": true
+           },
+           "presentation":{
+               "echo":true,
+               "reveal":"always",
+               "focus":false,
+               "panel": "shared",
+           }
         }
     ]
 }
