@@ -4,7 +4,7 @@
 - [GitHub](#github)
 - [GDB](#gdb)
 - [VS Code](#vscode)
-- [WeChat](#wechat)
+- [Windows](#exe)
 <span id="github"></span>
 ## GitHub
 ### md文件插入图片
@@ -169,22 +169,6 @@ tasks.json
     ]
 }
 ```
-<span id="wechat"></span>
-## 安装electronic-wechat
-前提：git,npm  
-命令：
-```
-git clone https://github.com/geeeeeeeeek/electronic-wechat.git 
-```
-Go into the repository 
-```
-cd electronic-wechat 
-```
-Install dependencies and run the app 
-```
-npm install && npm start
-```
-编译成app
-```
-npm run build:linux
-```
+<span id="exe"></span>
+## 安装windows程序
+[2018年wine QQ最完美解决方案(多Linux发行版通过测试并稳定运行)](https://www.lulinux.com/archives/1319)
