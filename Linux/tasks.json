@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            //c的话改为gcc
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                //linux 下是${fileBasenameNoExtension}
+                "${fileNDirname}/${fileBasenameNoExtension}.exe",
+                "-g",
+                "-Wall",
+                "-static-libgcc",
+                "-std=c++17"
+           ],
+           "type":"shell",
+           "group":{
+               "kind":"build",
+               "isDefault": true
+           },
+           "presentation":{
+               "echo":true,
+               "reveal":"always",
+               "focus":false,
+               "panel": "shared",
+           }
+        }
+    ]
+}
