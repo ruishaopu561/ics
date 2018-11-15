@@ -26,16 +26,11 @@ quit
 ```
 <span id="vscode"></span>
 ## vscode配置C++
-Linux下：  
 其中Launch.json中的"preLaunchTask"值要与tasks.json中的"Label"值对上，然后Launch.json中主要修改"program"，tasks.json中修改"command"。
 式子中具体命令或字符串的含义，自己去查吧。  
-话不多说，上代码  
 - [Launch.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/Launch.json)
 - [tasks.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/tasks.json)  
-windows下:  
 - [c_cpp_properties.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/c_cpp_properties.json)
-- [launch.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/launch.json)
-- [tasks.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/launch.json)
 <span id="exe"></span>
 ## 安装windows程序
 [2018年wine QQ最完美解决方案(多Linux发行版通过测试并稳定运行)](https://www.lulinux.com/archives/1319)
