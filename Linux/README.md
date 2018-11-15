@@ -31,43 +31,10 @@ Linux下：
 式子中具体命令或字符串的含义，自己去查吧。  
 话不多说，上代码  
 - [Launch.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/Launch.json)
-- [tasks.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/tasks.json)
+- [tasks.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/tasks.json)  
 windows下:  
 - [c_cpp_properties.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/c_cpp_properties.json)
-```json
-{
-    "configurations":[
-        {
-            "name":"Win32",
-            "intelliSenseMode": "clang-x64",
-            "includePath": [
-                "${workspaceFolder}",
-                "path..."
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE",
-                "__GNUC__=7",
-                "__cdecl=__attribute__((__cdecl__))"
-            ],
-            "browse": {
-                "path": [
-                    "${workspaceFolder}",
-                    "path..."
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            },
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "compilerPath": "..."
-        }
-    ],
-    "version": 4
-}
-```
-launch.json
+- [launch.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/launch.json)
 ```json
 {
     "version": "0.2.0",
@@ -97,39 +64,7 @@ launch.json
     ]
 }
 ```
-tasks.json
-```json
-{
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Compile",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "${file}",
-                "-o",
-                "${fileNDirname}/${fileBasenameNoExtension}.exe",
-                "-g",
-                "-Wall",
-                "-static-libgcc",
-                "-std=c++17"
-           ],
-           "type":"shell",
-           "group":{
-               "kind":"build",
-               "isDefault": true
-           },
-           "presentation":{
-               "echo":true,
-               "reveal":"always",
-               "focus":false,
-               "panel": "shared",
-           }
-        }
-    ]
-}
-```
+- [tasks.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/launch.json)
 <span id="exe"></span>
 ## 安装windows程序
 [2018年wine QQ最完美解决方案(多Linux发行版通过测试并稳定运行)](https://www.lulinux.com/archives/1319)
