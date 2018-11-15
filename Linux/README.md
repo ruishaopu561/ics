@@ -35,35 +35,6 @@ Linux下：
 windows下:  
 - [c_cpp_properties.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/c_cpp_properties.json)
 - [launch.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/launch.json)
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": true,
-            "internalConsoleOptions":"neverOpen",
-            "MIMode": "gdb",
-            "miDebuggerPath": "gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": false
-                }
-            ],
-            "preLaunchTask": "Compile"
-        }
-    ]
-}
-```
 - [tasks.json](https://github.com/ruishaopu561/ics/blob/produce/Linux/launch.json)
 <span id="exe"></span>
 ## 安装windows程序
