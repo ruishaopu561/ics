@@ -5,6 +5,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
+            //windows 下 改为"program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
             "program": "${workspaceFolder}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
@@ -12,6 +13,7 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
+            //windows 下添加 "miDebuggerPath": "gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -19,6 +21,7 @@
                     "ignoreFailures": true
                 }
             ],
+            //windows 下 改为"preLaunchTask": "Compile"
             "preLaunchTask": "build",
         }
     ]
