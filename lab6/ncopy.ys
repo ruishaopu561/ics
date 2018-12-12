@@ -117,36 +117,6 @@ Npos13:
 	iaddq $1, %rax
 	jmp Np
 
-Loop2:
-	mrmovq (%rdi), %r8
-	mrmovq 0x8(%rdi), %r9
-	mrmovq 0x10(%rdi), %r10
-	mrmovq 0x18(%rdi), %r11
-	rmmovq %r8, (%rsi)
-	rmmovq %r9, 0x8(%rsi)
-	rmmovq %r10, 0x10(%rsi)
-	rmmovq %r11, 0x18(%rsi)
-	iaddq $32, %rdi
-	iaddq $32, %rsi
-	iaddq $-4, %rdx
-Npos10:
-	andq %r8, %r8
-	jle Npos11
-	iaddq $1, %rax
-Npos11:
-	andq %r9, %r9
-	jle Npos12
-	iaddq $1, %rax
-Npos12:
-	andq %r10, %r10
-	jle Npos13
-	iaddq $1, %rax
-Npos13:
-	andq %r11, %r11
-	jle Np
-	iaddq $1, %rax
-	jmp Np
-	
 Loop:
 	mrmovq (%rdi), %r8	# read val from src...
 	rmmovq %r8, (%rsi)	# ...and store it to dst
