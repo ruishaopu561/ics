@@ -5,6 +5,7 @@
 - [GDB](#gdb)
 - [VS Code](#vscode)
 - [Windows](#exe)
+- [dpkg](#dpkg)
 <span id="github"></span>
 ## GitHub
 ### md文件插入图片
@@ -34,3 +35,22 @@ quit
 <span id="exe"></span>
 ## 安装windows程序
 [2018年wine QQ最完美解决方案(多Linux发行版通过测试并稳定运行)](https://www.lulinux.com/archives/1319)
+<span id="dpkg"></span>
+## dpkg使用
+安装命令：
+```
+sudo dpkg -i deb文件名
+```
+如果出现问题，可以用以下命令修复安装：
+ ```
+ sudo apt-get install -f
+ ```
+ 卸载  
+ 用以下命令查找已安装:  
+ ```
+ sudo dpkg -l
+ ```
+ 用以下命令进行卸载：  
+ ```
+ sudo dpkg -r软件名
+ ```
