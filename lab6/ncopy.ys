@@ -1,0 +1,117 @@
+#/* $begin ncopy-ys */
+##################################################################
+# ncopy.ys - Copy a src block of len words to dst.
+# Return the number of positive words (>0) contained in src.
+#
+# Include your name and ID here.
+# My Name: Rui shaopu
+# ID: 517030910217
+#
+# Describe how and why you modified the baseline code.
+#
+##################################################################
+# Do not modify this portion
+# Function prologue.
+# %rdi = src, %rsi = dst, %rdx = len
+ncopy:
+
+##################################################################
+# You can modify this portion
+# Loop header
+	xorq %rax,%rax
+	iaddq $-8, %rdx
+	jl Npos12
+Loop1:
+	mrmovq (%rdi), %r8
+	mrmovq 0x8(%rdi), %r9
+	mrmovq 0x10(%rdi), %r10
+	mrmovq 0x18(%rdi), %r11
+	mrmovq 0x20(%rdi), %r12
+	mrmovq 0x28(%rdi), %r13
+	mrmovq 0x30(%rdi), %r14
+	mrmovq 0x38(%rdi), %rbx
+	rmmovq %r8, (%rsi)
+	rmmovq %r9, 0x8(%rsi)
+	rmmovq %r10, 0x10(%rsi)
+	rmmovq %r11, 0x18(%rsi)
+	rmmovq %r12, 0x20(%rsi)
+	rmmovq %r13, 0x28(%rsi)
+	rmmovq %r14, 0x30(%rsi)
+	rmmovq %rbx, 0x38(%rsi)
+	iaddq $64, %rdi
+	iaddq $64, %rsi
+Npos1:
+	andq %r8, %r8
+	jle Npos2
+	iaddq $1, %rax
+Npos2:
+	andq %r9, %r9	
+	jle Npos3
+	iaddq $1, %rax
+Npos3:
+	andq %r10, %r10
+	jle Npos4
+	iaddq $1, %rax
+Npos4:
+	andq %r11, %r11
+	jle Npos5
+	iaddq $1, %rax
+Npos5:
+	andq %r12, %r12
+	jle Npos6
+	iaddq $1, %rax
+Npos6:
+	andq %r13, %r13
+	jle Npos7
+	iaddq $1, %rax
+Npos7:
+	andq %r14, %r14
+	jle Npos8
+	iaddq $1, %rax
+Npos8:
+	andq %rbx, %rbx
+	jle Npos9
+	iaddq $1, %rax
+Npos9:
+	iaddq $-8, %rdx
+	jge Loop1
+
+Npos12:
+	iaddq $6, %rdx
+	jl Loop
+
+Loop2:
+	mrmovq (%rdi), %r8
+	mrmovq 0x8(%rdi), %r9
+	rmmovq %r8, (%rsi)
+	rmmovq %r9, 0x8(%rsi)
+	iaddq $16, %rdi
+	iaddq $16, %rsi
+Npos10:
+	andq %r8, %r8
+	jle Npos11
+	iaddq $1, %rax
+Npos11:
+	andq %r9, %r9
+	jle Npos13
+	iaddq $1, %rax
+Npos13:
+	iaddq $-2, %rdx
+	jge Loop2
+Loop:
+	iaddq $1, %rdx
+	jl Done			    # if so, goto Loop:
+	mrmovq (%rdi), %r8	# read val from src...
+	rmmovq %r8, (%rsi)	# ...and store it to dst
+	andq %r8, %r8		# val <= 0?
+	jle Done		    # if so, goto Npos:
+	iaddq $1, %rax		# count++
+##################################################################
+# Do not modify the following section of code
+# Function epilogue.
+Done:
+	ret
+##################################################################
+# Keep the following label at the end of your function
+End:
+#/* $end ncopy-ys */
