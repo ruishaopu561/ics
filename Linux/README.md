@@ -6,6 +6,7 @@
 - [VS Code](#vscode)
 - [Windows](#exe)
 - [dpkg](#dpkg)
+- [ssr](#ssr)
 <span id="github"></span>
 ## GitHub
 ### md文件插入图片
@@ -54,3 +55,9 @@ sudo dpkg -i deb文件名
  ```
  sudo dpkg -r软件名
  ```
+<span id="ssr"></span>
+## 配置ssr代理
+参考网页：(search "ubuntu ssr 客户端")  
+-[ubuntu下ssr安装与使用](http://cache.baiducontent.com/c?m=9d78d513d98411e804abd3690d679627594380122ba7a4020ea28438e3732844506793ac57260775a3d13b275fa0131aacb2776536703daade8dcd5dddccca737cd4666e370b8636438e46b2895b73c522c35dbaae19e3baf137&p=9e759a4ed1d817e60be296271156&newp=86759a4ed18518b905f5c7710f0c92695d0fc20e3cd0c44324b9d71fd325001c1b69e7bf23211701d4c0796207ad4859e1f53170301766dada9fca458ae7c46e769e7a2c&user=baidu&fm=sc&query=ubuntu+ssr+%BF%CD%BB%A7%B6%CB&qid=da660653000f057e&p1=8)  
+-[参考github](https://github.com/FelisCatus/SwitchyOmega/releases)  
+PS:记得本地的SwitchyOmega选项
