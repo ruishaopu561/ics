@@ -1,12 +1,63 @@
 # Linux
 这篇md主要记录一些比较零碎的、Linux里经常用到的命令、指令、文件的配置等等。。。
 ## Contents
+- [Ubuntu install](#ubuntu)
 - [GitHub](#github)
 - [GDB](#gdb)
 - [VS Code](#vscode)
 - [Windows](#exe)
 - [dpkg](#dpkg)
 - [ssr](#ssr)
+<span id="ubuntu"></span>
+## Ubuntu Install
+以宏基电脑为例，安装ubuntu18.04系统
+### 找不到boot manager
+boot manager用f12打开，但f12选项可能被禁用了，需要手动打开。  
+具体步骤：
+> * 1，宏基快捷键是F12，有的电脑启用了F12，但也有的电脑没有启用F12快捷键，所以我们先要到BIOS中去打开快捷键F12，启用
+它。开机进入标志画面后，按F2键进入BIOS。
+> * 2，进入BIOS主界面后，在Main项下，找到F12 Boot Menu，其中文意思是“F12启动菜单”，它现在的设置是Disabled(关闭)，
+我们要把它打开，先把光标移到这一项上来，然后按Enter键。
+> * 3.当按了Enter键以后，会弹出一个小窗口，有两个选项，一个为Disabled(关闭)，另一个为Enabled(打开)，我们要选择
+Enabled这一项，然后按Enter键确定，这样就打开了F12快捷键，然后按F10保存并退出。
+> * 4.重新启动电脑后，就可按F12快捷键，立即进入启动菜单Boot Manager，在这里有四个选项启动，1硬盘，2光盘，3网卡，4U
+盘，如果你想用U盘启动，可以用上下方向键把光标移到第4项(USB HDD)，然后按Enter键，就能立即从U盘启动。
+### 分区分配推荐
+#### linux分区设置：  
+方法一：
+```
+Swap（相当于电脑内存）：逻辑分区、大小设置为电脑内存大小，2G，4G；
+
+/boot（引导分区）：主分区：大小设置为200M；
+
+/home（用户存储数据用）：逻辑分区，要尽可能大，100G空间可以设置为85G，留10G给主分区即可。
+
+/.（主分区）：主分区，用于存放系统，相当于win7的C盘，10G即可。
+```
+方法二：
+```
+/.（主分区）：主分区，只分这一个区，将所有空闲空间（free space）都分给主分区。
+```
+方法三：
+```
+Swap（相当于电脑内存）：逻辑分区、大小设置为电脑内存大小，2G，4G；
+
+/.（主分区）：主分区，用于存放系统，相当于win7的C盘，其他剩余空间都分给主分区。
+```
+#### 具体大小安排参考
+```
+挂载点/；主分区；安装系统和软件；大小为150G；分区格式为ext4； 
+
+挂载点/home；逻辑分区；相当于“我的文档”；150G大小为硬盘剩下的; 分区格式ext4； 
+
+ swap；逻辑分区；充当虚拟内存；大小等于内存大小（本人8G）；分区格式为swap 
+
+挂载点/boot ；引导分区；逻辑分区； 大小为1G ；分区格式为ext4；
+```
+#### Reference
+- [宏碁电脑版本安装ubuntu](https://www.jianshu.com/p/1b66f5c78025)
+- [ubuntu16.04分区设置](https://blog.csdn.net/zhangxiangweide/article/details/74779652)
+- [Ubuntu 16.04安装手动分区配置](https://blog.csdn.net/qq_27623521/article/details/78836988)
 <span id="github"></span>
 ## GitHub
 ### md文件插入图片
