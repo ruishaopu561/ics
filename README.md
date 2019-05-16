@@ -9,5 +9,3 @@
 - [lab6](https://github.com/ruishaopu561/ics/tree/master/lab6)
 - [lab7](https://github.com/ruishaopu561/ics/tree/master/lab7)
 
-## Others
-- [linux](https://github.com/ruishaopu561/ics/tree/master/Linux)
